@@ -1,5 +1,7 @@
+import 'package:filmy/Core/utils/app_router.dart';
 import 'package:filmy/Features/splash/presentation/views/widgets/sliding_animation_logo.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -16,11 +18,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initSlidingAnimation();
-    Future.delayed(Duration(seconds: 3));
-    
-    
+    navigatorToHomeScreen();
   }
 
+  
   @override
   void dispose() {
     super.dispose();
@@ -47,4 +48,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
     ).animate(animationController);
     animationController.forward();
   }
+  void navigatorToHomeScreen() {
+    Future.delayed(Duration(seconds: 3), () {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    });
+  }
+
 }
