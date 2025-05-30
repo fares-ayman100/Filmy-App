@@ -1,4 +1,4 @@
-import 'package:filmy/Features/splash/presentation/views/splash_view.dart';
+import 'package:filmy/Core/utils/app_router.dart';
 import 'package:filmy/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +11,10 @@ class FilmyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor),
-      home: SplashView(),
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
     );
   }
