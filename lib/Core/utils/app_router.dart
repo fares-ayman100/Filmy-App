@@ -4,6 +4,9 @@ import 'package:go_router/go_router.dart';
 
 abstract class AppRouter {
   static const kHomeView = '/homeView';
+  static const kPersonView = '/homeView';
+  static const kSearchView = '/homeView';
+  static const kFavouriteView = '/homeView';
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => SplashView()),

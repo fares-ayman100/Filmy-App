@@ -13,7 +13,12 @@ class FilmyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: kPrimaryColor),
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+      ),
+
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
     );

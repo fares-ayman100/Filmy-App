@@ -30,10 +30,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: SlidingAnimationLogo(slidingAnimation: slidingAnimation),
-      ),
+    return Scaffold(
+      body: SlidingAnimationLogo(slidingAnimation: slidingAnimation),
     );
   }
 
