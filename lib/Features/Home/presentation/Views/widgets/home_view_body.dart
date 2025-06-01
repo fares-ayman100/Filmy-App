@@ -1,8 +1,8 @@
 import 'package:filmy/Core/utils/app_router.dart';
 import 'package:filmy/Core/utils/assets.dart';
-import 'package:filmy/Core/utils/styles.dart';
 import 'package:filmy/Features/Home/presentation/Views/widgets/custom_app_bar.dart';
 import 'package:filmy/Features/Home/presentation/Views/widgets/custom_bottom_navigation_bar.dart';
+import 'package:filmy/Features/Home/presentation/Views/widgets/grid_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -37,7 +37,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       body: Column(
         children: [
           CustomAppBar(),
-          SizedBox(height: 50, width: 50, child: Image.asset(AssetsData.logo)),
+          GridViewItem(),
         ],
       )
       
