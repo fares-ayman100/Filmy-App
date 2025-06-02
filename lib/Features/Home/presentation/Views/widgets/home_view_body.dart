@@ -1,8 +1,8 @@
 import 'package:filmy/Core/utils/app_router.dart';
-import 'package:filmy/Core/utils/assets.dart';
+import 'package:filmy/Core/utils/styles.dart';
 import 'package:filmy/Features/Home/presentation/Views/widgets/custom_app_bar.dart';
 import 'package:filmy/Features/Home/presentation/Views/widgets/custom_bottom_navigation_bar.dart';
-import 'package:filmy/Features/Home/presentation/Views/widgets/grid_view_item.dart';
+import 'package:filmy/Features/Home/presentation/Views/widgets/grid_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -24,7 +24,6 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       bottomNavigationBar: CustomBottomNavigationBar(
         currentIndex: selectedIndex,
         onTap: (index) {
@@ -34,13 +33,20 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           context.go(routes[index]);
         },
       ),
-      body: Column(
-        children: [
-          CustomAppBar(),
-          GridViewItem(),
-        ],
-      )
-      
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 28),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CustomAppBar(),
+              Text('Popular Movie', style: Styles.font32WhiteSemibold),
+              const SizedBox(height: 16),
+              GridListView(),
+            ],
+          )
+        ),
+      ),
     );
   }
 }
