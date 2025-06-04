@@ -1,4 +1,5 @@
 import 'package:filmy/Features/Home/presentation/Views/home_view.dart';
+import 'package:filmy/Features/Home/presentation/Views/movie_details_view.dart';
 import 'package:filmy/Features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -7,6 +8,7 @@ abstract class AppRouter {
   static const kPersonView = '/personView';
   static const kSearchView = '/searchView';
   static const kFavouriteView = '/FavouritView';
+  static const kMovieDetailsView = '/MovieDetailsView';
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => SplashView()),
@@ -14,6 +16,10 @@ abstract class AppRouter {
         path: AppRouter.kHomeView,
         builder: (context, state) => HomeView(),
       ),
+      GoRoute(
+        path: AppRouter.kMovieDetailsView,
+        builder: (context, state) => MovieDetailsView(),
+      )
     ],
   );
 }

@@ -21,4 +21,14 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );
+  static final font16WhiteMedium = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+  );
+  static final font18WhiteSemiBold = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
 }

@@ -18,7 +18,7 @@ class GridListViewItem extends StatelessWidget {
           maxLines: 1,
           style: Styles.font24WhiteBold,
         ),
-        MovieRating(),
+        MovieRating(size: 25, textStyle: Styles.font16WhiteSemiBold),
       ],
     );
   }
