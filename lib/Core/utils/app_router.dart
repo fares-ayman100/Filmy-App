@@ -15,6 +15,7 @@ abstract class AppRouter {
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => SplashView()),
+      GoRoute(path:kMovieDetailsView,builder: (context, state) => MovieDetailsView(),),
       ShellRoute(
         builder: (context, state, child) => MainScaffold(child: child,),
         routes: [

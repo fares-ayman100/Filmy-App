@@ -31,4 +31,24 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );
+  static final font20WhiteSemiBold = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+  static final font26WhiteSemiBold = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w600,
+    color: Colors.white,
+  );
+  static final font24GreyNormal = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w400,
+    color: Colors.grey,
+  );
+  static final font20GreyNormal = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w400,
+    color: Colors.grey,
+  );
 }
